@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 
 namespace Printer
 
@@ -6,9 +7,11 @@ namespace Printer
     public class OutOfInkEventArgs : EventArgs
     {
         public string Colour { get; set; }
-        public OutOfInkEventArgs(string colour)
+        public int PageNumber {get; set; }
+        public OutOfInkEventArgs(string colour, int pageNumber)
         {
             Colour = colour;
+            PageNumber = pageNumber;
         }
     }
 }
